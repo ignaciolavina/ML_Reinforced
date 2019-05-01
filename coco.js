@@ -5,7 +5,11 @@ class Coco {
     this.speed = 10;
   }
 
-  show() {
+  add_neural_network(neuralNetwork) {
+    this.neuralNetwork = neuralNetwork;
+  }
+
+  draw() {
     fill(255, 0, 0);
     ellipse(this.x, this.y, 50, 50);
   }

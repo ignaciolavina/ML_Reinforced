@@ -71,7 +71,7 @@ class NeuralNetwork {
     for (let i = 0; i < this.neurons_final_layer; i++) {
       this.list_final_layer[i] = new Neuron(
         this.initial_point + this.size - 20, // 20 is for the size of the neuron
-        this.initial_point + this.y_space + i * this.y_space
+        this.y_space + i * this.y_space
       );
     }
 
