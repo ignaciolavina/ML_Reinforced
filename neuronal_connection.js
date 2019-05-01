@@ -6,7 +6,7 @@ class Neural_connection {
   }
 
   draw() {
-    if (weight < 0) {
+    if (this.weight < 0) {
       stroke(0);
       strokeWeight(abs(1 + this.weight * 4));
       line(this.neuron1.x, this.neuron1.y, this.neuron2.x, this.neuron2.y);
