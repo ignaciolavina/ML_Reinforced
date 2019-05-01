@@ -1,39 +1,40 @@
 const WIDTH = 600;
-const HEIGHT = 400;
+const HEIGHT = 700;
 // neruonal_ canvas:
-const R_WIDTH = 600;
+const R_WIDTH = 400;
 const R_HEIGHT = 400;
 const ID_NUMBER = 0;
+const NW_SIZE = 500;
 
 var coco;
 var candy;
-var n1, n2;
+
+var best_nw_net;
+
+var list_connections;
 
 function setup() {
-  var canvas = createCanvas(1000, 400);
-  leftCanvas = createGraphics(WIDTH, HEIGHT);
-  tightCanvas = createGraphics(R_WIDTH, R_HEIGHT);
-  coco = new Coco(100, 100);
-  n1 = new Neuron(200, 200, ID_NUMBER);
+  var canvas = createCanvas(WIDTH, HEIGHT);
+  //coco = new Coco(100, 100);
 
-  n2 = new Neuron(300, 300, ID_NUMBER);
+  best_nw_net = new NeuralNetwork(0, NW_SIZE, 2, 7, 2, 2);
   //candy = new Candy();
+
+  //list_connections = new list_connections();
+
+  //best_nw_net.set_initial_values();
+
+  //var final_value = best_nw_net.get_values();
 }
 
 function draw() {
   draw_left();
-  draw_right();
-  //candy.draw();
 }
 
 function draw_left() {
   background(0);
-  coco.move();
-  coco.show();
-}
-
-function draw_right() {
-  background(122);
-  n1.draw();
-  n2.draw();
+  // rect(0, 0, NW_SIZE, NW_SIZE);
+  // coco.move();
+  // coco.show();
+  best_nw_net.draw();
 }

@@ -7,6 +7,8 @@ class Neuron {
 
     this.neurons_prev = [];
     this.neurons_prev = [];
+    //console.log("neuron" + this.id);
+    print("neuron" + this.id + "x: " + this.x + "y: " + this.y);
   }
   /*
     ArrayList <Neuron> neurons_prev = new ArrayList <Neuron> ();
@@ -25,6 +27,6 @@ class Neuron {
   draw() {
     fill(255, 0, 0);
     ellipseMode(CENTER);
-    ellipse(this.x, this.y, this.size);
+    ellipse(this.x, this.y, this.size, this.size);
   }
 }

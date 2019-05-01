@@ -8,12 +8,12 @@ class Neural_connection {
   draw() {
     if (weight < 0) {
       stroke(0);
-      strokeWeight(abs(1 + weight * 4));
-      line(neuron1.x, neuron1.y, neuron2.x, neuron2.y);
+      strokeWeight(abs(1 + this.weight * 4));
+      line(this.neuron1.x, this.neuron1.y, this.neuron2.x, this.neuron2.y);
     } else {
       stroke(255);
-      strokeWeight(1 + weight * 4);
-      line(neuron1.x, neuron1.y, neuron2.x, neuron2.y);
+      strokeWeight(1 + this.weight * 4);
+      line(this.neuron1.x, this.neuron1.y, this.neuron2.x, this.neuron2.y);
     }
   }
 }

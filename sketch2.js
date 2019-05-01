@@ -2,6 +2,9 @@
 // actually I'd argue is clearer as it reinforces the fact the callback function
 // is passed as an argument to p5 and that its naming is arbitrary
 // to the point of not being necessary
+
+var liu = 200;
+
 new p5(
   function(p) {
     "use strict";
@@ -17,6 +20,9 @@ new p5(
 
     p.draw = function() {
       p.background(colour);
+
+      p.fill(255);
+      p.ellipse(liu, 50, 50, 50);
     };
 
     p.mousePressed = function() {
@@ -48,6 +54,8 @@ new p5(
 
     p.draw = function() {
       p.background(colour);
+      p.fill(255);
+      p.ellipse(, 50, 50, 50);
     };
 
     // it's worth noting that mousePressed does nothing to
